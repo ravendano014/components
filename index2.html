@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <title>MetroUI - frontend toolkit with Fluent design</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="google-site-verification" content="mhiOrlOM4SO59YbQidIF19yI4LcLObNZngrNmoBkWT8" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="preload" href="https://cdn.korzh.com/assets/fonts/Simple-Line-Icons.woff" as="font" type="font/woff2" crossorigin>
+    
+    
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWL8N67');</script>
+<!-- End Google Tag Manager -->
+
+    <link href="css/korzh-com-bundle.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <!--
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&amp;subset=all' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto:300italic,400italic,700italic,400,300,700&amp;subset=all' rel='stylesheet' type='text/css'>
+    <link href="/themes/jango/plugins/socicon/socicon.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/bootstrap-social/bootstrap-social.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/animate/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    -->
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN: BASE PLUGINS  -->
+    <!--
+    <link href="/themes/jango/plugins/revo-slider/css/settings.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/plugins/slider-for-bootstrap/css/slider.css" rel="stylesheet" type="text/css" />
+    -->
+    <!-- END: BASE PLUGINS -->
+    <!-- BEGIN THEME STYLES -->
+    <!--
+    <link href="/themes/jango/base/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/base/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="/themes/jango/base/css/themes/blue2.css" rel="stylesheet" id="style_theme" type="text/css" />
+    <link href="/themes/jango/base/css/custom.css" rel="stylesheet" type="text/css" />
+    -->
+    <!-- END THEME STYLES -->
+    <!--
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/outer.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/vs.min.css">
+    -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <style>
+        a:hover {
+            text-decoration: none !important;
+        }
+        
+        .c-navbar, .c-layout-footer {
+            font-family: Roboto Condensed,sans-serif;
+        }
+        
+        .c-content-box.c-size-md.top-block {
+            padding-top: 60px !important;
+        }
+
+        @media (min-width: 992px) {
+            .c-navbar .container {
+                width: 990px;
+                position: relative;
+            }
+
+            .c-layout-header .c-navbar .c-mega-menu.c-fonts-uppercase > .nav.navbar-nav > li > .c-link {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .c-navbar .container {
+                width: 1170px;
+                position: relative;
+            }
+
+            .c-layout-header .c-navbar .c-mega-menu.c-fonts-uppercase > .nav.navbar-nav > li > .c-link {
+                font-size: 15px;
+            }
+        }
+    </style>
+    <style>
+
+        .krh-top-submenu {
+            background-color: white !important;
+            right: 26px !important;
+        }
+
+        .krh-top-submenu > li {
+            width: auto !important;
+        }
+
+        .krh-top-submenu .dropdown-menu {
+            min-width: unset !important;
+            padding: 0 !important;
+        }
+
+        .krh-top-submenu .dropdown-menu > li > a {
+            padding: 5px 10px !important;
+            background-color: white;
+        }
+
+        .c-layout-footer {
+            font-size: 17px;
+            font-weight: 300;
+            color: #b1bcc9;
+        }
+        
+        .c-layout-footer.c-layout-footer-2 .c-container > .c-links .c-nav > li > a {
+            font-size: 12px;
+            font-weight: 400;
+            color: #b1bcc9;
+        }
+
+        @media (max-width: 992px) {
+            .dropdown-submenu {
+                padding-left: 30px;
+            }
+
+            .krh-top-submenu {
+                display: none !important;
+            }
+        }
+        
+        .dropdown-toggle::before {
+            display: block;
+            position: absolute;
+            vertical-align: middle;
+            color: transparent;
+            font-size: 0;
+            content: "";
+            height: 0.5rem;
+            width: 0.5rem;
+            background-color: transparent;
+            border-left: 1px solid;
+            border-bottom: 1px solid;
+            border-color: #1d1d1d;
+            top: 50%;
+            left: 100%;
+            margin-left: -1rem;
+            margin-top: -0.1625rem;
+            z-index: 2;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transition: all .15s ease-in-out;
+            transition: all .15s ease-in-out;
+            -webkit-transform-origin: center center 1px;
+            transform-origin: center center 1px;
+        }        
+    </style>
+
+    
+    <link rel="stylesheet" href="//cdn.metroui.org.ua/v4/css/metro-all.min.css">
+    <link rel="stylesheet" href="https://metroui.org.ua/korzh/index.93888a37.css">
+
+
+</head>
+<body class="c-layout-header-fixed c-layout-header-mobile-fixed">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWL8N67"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+    <!-- STOP WAR banner -->
+    <a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi" 
+        class="em-ribbon" style="position: fixed; left:0; top:0; width: 90px; height: 90px; background: url('http://stfalcon.github.io/stopwar/img/stop-war-in-ukraine.png'); z-index: 10000; border: 0;" 
+        title="Do something to stop this war! Russians are killing our children and civilians!" target="_blank"></a>
+
+    <!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
+    <!-- BEGIN: HEADER -->
+    <!-- END: HEADER -->
+    <!-- BEGIN: HEADER -->
+    <header class="c-layout-header c-layout-header-4 c-layout-header-default-mobile" data-minimize-offset="80">
+        <div class="c-navbar">
+            <div class="c-container">
+                <div class="container">
+                    <div class="c-navbar-wrapper clearfix">
+                        <div class="c-brand c-pull-left">
+	<a href="/" class="c-logo">
+		<img src="images/korzh_logo.png" alt="KORZH.COM" class="c-desktop-logo">
+		<img src="images/korzh_logo.png" alt="KORZH.COM" class="c-desktop-logo-inverse">
+		<img src="images/korzh_logo.png" alt="KORZH.COM" class="c-mobile-logo">
+	</a>
+	<button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
+		<span class="c-line"></span>
+		<span class="c-line"></span>
+		<span class="c-line"></span>
+	</button>
+<!--
+	<button class="c-search-toggler" type="button">
+		<i class="fa fa-search"></i>
+	</button>
+-->
+</div>
+
+                        <form class="c-quick-search" action="#">
+                            <input type="text" name="query" placeholder="Type to search..." value="" class="form-control" autocomplete="off">
+                            <span class="c-theme-link">&times;</span>
+                        </form>
+                        
+    <nav class="c-mega-menu c-pull-right c-mega-menu-light c-mega-menu-light-mobile c-fonts-uppercase c-fonts-bold">
+        <ul class="nav navbar-nav c-theme-nav">
+            <li class="c-menu-item c-menu-item-home">
+                <a href="/" class="c-link">Home</a>
+
+
+
+
+            </li>
+            <li class="c-menu-type-classic c-menu-item-eq">
+                <a href="javascript:;" class="c-link dropdown-toggle">
+                    EasyQuery
+                    <span class="c-arrow c-toggler"></span>
+                </a>
+                <ul class="dropdown-menu c-menu-type-classic c-pull-left">
+                    <li class="c-menu-item c-menu-item-eqnet">
+                        <a href="/easyquery">EasyQuery.NET</a>
+                    </li>
+                    <li class="c-menu-item c-menu-item-eqjs">
+                        <a href="/easyquery/javascript">EasyQuery.JS</a>
+                    </li>
+                    <li class="c-menu-item c-menu-item-ersk">
+                        <a href="/easy-report-starter-kit">EasyReport Starter Kit</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="c-menu-item c-menu-item-loc">
+                <a href="/metroui" class="c-link">MetroUI</a>
+            </li>
+            <li class="c-menu-item c-menu-item-loc">
+                <a href="/localizer" class="c-link">Localizer</a>
+            </li>
+            <li class="c-menu-item c-menu-item-blog">
+                <a href="/blog" class="c-link">Blog</a>
+            </li>
+            <li class="c-menu-item c-menu-item-supreq">
+                <a href="/support" class="c-link">Support</a>
+            </li>
+
+                <li>
+                    <a href="/account" class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold">
+                        <i class="icon-user"></i> Sign In
+                    </a>
+                </li>
+
+        </ul>
+    </nav>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END: HEADER -->
+    <!-- END: LAYOUT/HEADERS/HEADER-1 -->
+    <!-- BEGIN: PAGE CONTAINER -->
+    <div class="c-layout-page">
+
+        <!-- BEGIN: PAGE CONTENT -->
+        
+
+
+
+<div class="bg-brand container-fluid fg-white">
+    <div class="container pb-20 pt-20">
+        <div class="row">
+            <div class="cell-lg-6">
+                <div class="pb-10 pt-10">
+                    <h1>ABOUT METROUI</h1>
+                    <div>
+                        <p>MetroUI is an open-source frontend toolkit inspired by Microsoft Fluent (former Metro) design principles. 
+                        You can consider it as a Bootstrap replacement for web sites that need a fresh and catchy look. <br />
+                        MetroUI includes everything you need to build your frontend app: responsive grid system, 100+ prebuilt components, 500+ incons, 
+                        and powerful JavaScript plugins. 
+                        </p>
+                    </div>
+                    <div class="bd-default border-top mt-6 pt-6 text-leader">
+                        <div class="d-flex flex-align-center"> 
+                            <a class="button fg-white bd-white info large mt-4 outline" href="#licensing">Get started</a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell-lg-6 d-block-lg d-none-fs">
+                <div class="h-100"> <img src="https://metroui.org.ua/korzh/pandora.b375fe5d.png" style="max-height:420px" class="mr-10 place-right"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+        <div>
+            <div class="bg-white">
+                <div class="row">
+
+                    <div class="cell-md-4">
+                        <div class="bg-white fg-dark h-100 p-8">
+                            <img src="https://metroui.org.ua/korzh/ui-design.f79e922d.svg" alt="css" style="height:200px"> 
+                            <h4 class="fg-dark mt-4">100+ Components</h4>
+                            <p> More than 100 reusable components for all kinds of frontend tasks: navigation, alerts, dropdowns, inputs and much more
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cell-md-4">
+                        <div class="bg-white fg-dark h-100 p-8">
+                            <img src="https://metroui.org.ua/korzh/rocket.65e7b7d4.svg" alt="css" style="height:200px"> 
+                            <h4 class="fg-dark mt-4">Dependency free</h4>
+                            <p> MetroUI library has no dependencies on any third-party libraries. Everything you might need is included in the toolkit. </p>
+                        </div>
+                    </div>
+                    <div class="cell-md-4">
+                        <div class="bg-white fg-dark h-100 p-8">
+                            <img src="https://metroui.org.ua/korzh/bugs.91840046.svg" alt="css" style="height:200px"> 
+                            <h4 class="fg-dark mt-4">Technical support <sub>(paid option)</sub></h4>
+                            <p> We will be there for you when you need help. Rapid response and quick fixing of detected problems. </p>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="row">
+                    <div class="cell-md-4">
+                        <div class="bg-white fg-dark h-100 p-8">
+                            <img src="https://metroui.org.ua/korzh/css.15acd502.svg" alt="css" style="height:200px"> 
+                            <h4 class="fg-dark mt-4">Base styles</h4>
+                            <p> MetroUI includes various styles for changing the appearance of HTML elements. </p>
+                        </div>
+                    </div>
+                    <div class="cell-md-4">
+                        <div class="bg-white fg-dark h-100 p-8">
+                            <img src="https://metroui.org.ua/korzh/javascript.b6398250.svg" alt="css" style="height:200px"> 
+                            <h4 class="fg-dark mt-4">Tools and Routines</h4>
+                            <p> Various built-in tool functions and classes will increase your productivity. </p>
+                        </div>
+                    </div>
+                    <div class="cell-md-4">
+                        <div class="bg-white fg-dark h-100 p-8">
+                            <img src="https://metroui.org.ua/korzh/books.7862e39f.svg" alt="css" style="height:200px"> 
+                            <h4 class="fg-dark mt-4">Documentation</h4>
+                            <p> Detailed description of all elements of the library. </p>
+                        </div>
+                    </div>
+
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid in-action-wrapper2 pb-20 pt-20">
+    <div class="container">
+        <div class="h2 mb-1 text-center"><span>METROUI IN ACTION!</span></div>
+        <div class="mb-10 text-center text-leader2"> Many web-sites are built with MetroUI. Here are some examples.</div>
+        <div class="row">
+            <div class="cell-md-4">
+                <div class="work-box"> <a href="https://themes.org.ua/pandora"><img src="https://metroui.org.ua/korzh/pandora.6acb262f.jpg" alt="work pandora"></a> </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="work-box"> <a href="https://themes.org.ua/mirohost"><img src="https://metroui.org.ua/korzh/mirohost.383636b1.jpg" alt="work mirohost"></a> </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="work-box"> <a href="https://metroui.org.ua/examples/tiles/start.html"><img src="https://metroui.org.ua/korzh/start.b1335495.jpg" alt="work start screen"></a> </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell-md-4">
+                <div class="work-box"> <a href="https://themes.org.ua/aistant"><img src="https://metroui.org.ua/korzh/aistant.ef389218.jpg" alt="work aistant"></a> </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="work-box"> <a href="https://minataur.net"><img src="https://metroui.org.ua/korzh/minataur.1f493366.png" alt="Minataur - Mina blockchain explorer"></a> </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="work-box"> <a href="https://metroui.org.ua/examples/github/github.html"><img src="https://metroui.org.ua/korzh/github.0919502d.jpg" alt="work github"></a> </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bd-default bg-light border-top container-fluid pt-10" id="licensing">
+    <div class="container">
+        <div>
+            <h1 class="text-center">Licensing and Pricing</h1>
+            <div class="pl-20 pr-20 text-center text-leader">
+                <p class="fg-brand text-bold">MetroUI is absolutely free both for personal and commercial usage (distributed by MIT license)</p>
+                <p class="mt-0 reduce-2">
+                    There are paid options for those who need technical support or require quick response to their questions <br />
+                    or just want to support this project financially ;) </p>
+            </div>
+            <div class="scrollable-container">
+                <table class="price-table striped table">
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="text-leader">Community</div>
+                                <small>$</small><span class="price">0</span> 
+                            </td>
+                            <td>
+                                <div class="text-leader">Developer</div>
+                                <small>$</small><span class="price">249</span><small>/ year</small> 
+                            </td>
+                            <td>
+                                <div class="text-leader">Team</div>
+                                <small>$</small><span class="price">499</span><small>/ year</small> 
+                            </td>
+                            <td>
+                                <div class="text-leader">Company</div>
+                                <small>$</small><span class="price">999</span><small>/ year</small> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="text-leader2">Features</span></td>
+                            <td><a href="https://metroui.org.ua/intro.html" target="_blank" class="button outline success">READ THE DOCS</a></td>
+                            <td><a href="/orderform?c=METROUI-DEV" data-ga-page-path="/checkout/metroui" class="button info outline">BUY NOW</a></td>
+                            <td><a href="/orderform?c=METROUI-TEAM" data-ga-page-path="/checkout/metroui" class="button outline warning">BUY NOW</a></td>
+                            <td><a href="/orderform?c=METROUI-COMP" data-ga-page-path="/checkout/metroui" class="button outline alert">BUY NOW</a></td>
+                        </tr>
+                        <tr>
+                            <td>Source code</td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Free redistribution with your product</td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Community-driven support <br /> 
+                            <small>Via GitHub issues and questions on StackOverflow with [metroui] tag</small>
+                            </td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Premium support</td>
+                            <td><span class="fg-red mif-cancel"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                            <td><span class="fg-green mif-checkmark"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Number of accounts in the ticketing system</td>
+                            <td><strong>0</strong></td>
+                            <td><strong>1</strong></td>
+                            <td><strong>5</strong></td>
+                            <td><strong>Unlimited</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>Number of support hours</td>
+                            <td>
+                                <span class="hours-count">0</span> 
+                                <div class="text-muted text-small">hours</div>
+                            </td>
+                            <td>
+                                <span class="hours-count">10</span> 
+                                <div class="text-muted text-small">hours</div>
+                            </td>
+                            <td>
+                                <span class="hours-count">25</span> 
+                                <div class="text-muted text-small">hours</div>
+                            </td>
+                            <td>
+                                <span class="hours-count">50</span> 
+                                <div class="text-muted text-small">hours</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><a href="https://metroui.org.ua/intro.html" target="_blank" class="button outline success">READ THE DOCS</a></td>
+                            <td><a href="/orderform?c=METROUI-DEV" data-ga-page-path="/checkout/metroui" class="button info outline">BUY NOW</a></td>
+                            <td><a href="/orderform?c=METROUI-TEAM" data-ga-page-path="/checkout/metroui" class="button outline warning">BUY NOW</a></td>
+                            <td><a href="/orderform?c=METROUI-COMP" data-ga-page-path="/checkout/metroui" class="alert button outline">BUY NOW</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- END: PAGE CONTENT -->
+    </div>
+    <!-- END: PAGE CONTAINER -->
+    <!-- BEGIN: LAYOUT/FOOTERS/FOOTER-3 -->
+    <a id="footer"></a>
+
+        <!-- BEGIN: CONTENT/MISC/COOKIES-1 -->
+<div class="c-cookies-bar c-cookies-bar-1 c-cookies-bar-bottom c-bg-dark wow animate fadeInDown" data-wow-delay="1s" style="display: none;">
+    <div class="c-cookies-bar-container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="c-cookies-bar-content c-font-white">
+                    We use cookies to improve your experience on our website. By browsing this website, you agree to our use of cookies.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="c-cookies-bar-btn">
+                    <a href="/privacy#cookies" class="btn c-btn-white c-btn-border-1x c-btn-bold c-btn-square c-cookie-bar-link">More info</a>
+                    <a class="c-cookies-bar-close btn c-theme-btn c-btn-square c-btn-bold" href="javascript:;">Got it!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: CONTENT/MISC/COOKIES-1 -->
+<footer class="c-layout-footer c-layout-footer-2 c-option-2" style="opacity: 0;">
+    <div class="container">
+        <div class="row c-margin-b-20">
+            <div class="col-md-12">
+                <div class="c-container c-left">
+                    <div class="c-links">
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                        </ul>
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/easyquery">EasyQuery.NET</a>
+                            </li>
+                        </ul>
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/easyquery/javascript">EasyQuery.JS</a>
+                            </li>
+                        </ul>
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/easy-report-starter-kit">EasyReport SK</a>
+                            </li>
+                        </ul>
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/localizer">Localizer</a>
+                            </li>
+                        </ul>
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/blog">Blog</a>
+                            </li>
+                        </ul>
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/support">Support</a>
+                            </li>
+                        </ul>
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/support/resellers">Resellers FAQ</a>
+                            </li>
+                        </ul>
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/account">Your account</a>
+                            </li>
+                        </ul>
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/privacy">Privacy</a>
+                            </li>
+                        </ul>
+                        <ul class="c-nav">
+                            <li>
+                                <a href="/terms-of-use">Terms of Use</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-sm-12 c-col">
+                <p class="c-copyright c-font-grey">
+                    1998 - 2022 &copy; Korzh.com
+                    <span class="c-font-grey-3"> - All Rights Reserved.</span>
+                </p>
+            </div>
+            <div class="col-md-7 col-sm-12 c-col">
+                <p class="c-copyright c-font-grey c-right">
+                    <span class="c-font-grey-3">All product names, logos, and brands are the property of their respective owners.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="footerbottom"></div>
+
+
+
+    <!-- END: LAYOUT/FOOTERS/FOOTER-3 -->
+    <!-- BEGIN: LAYOUT/FOOTERS/GO2TOP -->
+    <div class="c-layout-go2top">
+        <i class="icon-arrow-up"></i>
+    </div>
+    <!-- END: LAYOUT/FOOTERS/GO2TOP -->
+    <!-- BEGIN: LAYOUT/BASE/BOTTOM -->
+    <!-- BEGIN: CORE PLUGINS -->
+    <!--[if lt IE 9]>
+    <script src="/js/excanvas.min.js"></script>
+    <![endif]-->
+    
+    <script src="js/korzh-com-bundle.min.js" type="text/javascript"></script>
+    
+    
+    <!--
+    <script src="/themes/jango/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="/themes/jango/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="/themes/jango/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/themes/jango/plugins/jquery.easing.min.js" type="text/javascript"></script>
+    -->
+    <!-- END: CORE PLUGINS -->
+    <!-- BEGIN: LAYOUT PLUGINS -->
+    <!--
+    <script src="/themes/jango/plugins/revo-slider/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+    <script src="/themes/jango/plugins/revo-slider/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+    <script src="/themes/jango/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js" type="text/javascript"></script>
+    <script src="/themes/jango/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="/themes/jango/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+    <script src="/themes/jango/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+    <script src="/themes/jango/plugins/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="/themes/jango/plugins/slider-for-bootstrap/js/bootstrap-slider.js" type="text/javascript"></script>
+    -->
+    <!-- END: LAYOUT PLUGINS -->
+    <!-- BEGIN: THEME SCRIPTS -->
+    <!--
+    <script src="/themes/jango/base/js/components.js" type="text/javascript"></script>
+    <script src="/themes/jango/base/js/components-shop.js" type="text/javascript"></script>
+    <script src="/themes/jango/base/js/app.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    -->
+    <script>
+        $(document).ready(function () {
+            App.init(); // init core
+        });
+    </script>
+    <!-- END: THEME SCRIPTS -->
+    <!-- BEGIN: TEMPLATE SCRIPTS -->
+    <script>
+        $(document).ready(function () {
+            $(".c-menu-item").removeClass("c-active");
+            if (window.selectedMenuItems) {
+                $.each(window.selectedMenuItems, function (index, value) {
+                    $("." + value).addClass("c-active");
+                });
+            }
+
+            $(".owl-carousel").owlCarousel();
+            hljs.initHighlighting();
+        })
+    </script>
+    <!-- END: TEMPLATE SCRIPTS -->
+    <!-- END: LAYOUT/BASE/BOTTOM -->
+
+    <!--  ============= Common Scripts ==============  -->
+
+<style>
+	.c-cookies-bar-1 {
+		width: 100%;
+		height: auto;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: auto;
+		bottom: auto;
+		z-index: 10000;
+		opacity: 0;
+	}
+
+	.c-cookies-bar-1.c-cookies-bar-top {
+		top: 0;
+	}
+
+	.c-cookies-bar-1.c-cookies-bar-bottom {
+		bottom: 0;
+	}
+
+	.c-cookies-bar-1 > .c-cookies-bar-container {
+		margin: 20px;
+	}
+
+	.c-cookies-bar-1 > .c-cookies-bar-container .c-cookies-bar-content {
+		margin: 5px;
+	}
+
+	.c-cookies-bar-1 > .c-cookies-bar-container .c-cookies-bar-btn {
+		text-align: right;
+	}
+
+</style>
+
+<script src="js/gazda-client.js" type="text/javascript"></script>
+
+<script>
+	$(document).ready(function () {
+		if (!LayoutCookies.confirmed()) {
+			LayoutCookies.init();
+		}
+                else {
+                    var cb = $('.c-cookies-bar');
+                    if (cb.length > 0) {
+                        cb.remove();
+                    }
+                }
+
+            setTimeout(function() {
+              var bottom = $('#footerbottom').position().top;
+              var windowHeight = $(window).height();
+            
+              if (bottom < windowHeight) {
+                  $('.c-layout-footer').css('position', 'fixed').css('bottom', 0);
+              }
+            
+              $('.c-layout-footer').animate({ opacity: 1 }, 500);
+            }, 1000);
+	});
+
+
+	// BEGIN : COOKIES NOTIFICATION BAR
+	var LayoutCookies = function () {
+		var _confirmed = function () {
+			var idx = document.cookie.indexOf('EUCookieGdpr=ok');
+			return (idx >= 0);
+		};
+		
+		var _initInstances = function () {
+
+			$('.c-cookies-bar').animate({
+				opacity: 1,
+			}, 500, function () {
+				$('.c-cookies-bar').css('display', 'block');
+			});
+
+			$('.c-cookies-bar-close').click(function () {
+				document.cookie = "EUCookieGdpr=ok; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT";
+				$('.c-cookies-bar').animate({
+					opacity: 0,
+				}, 500, function () {
+					$('.c-cookies-bar').css('display', 'none');
+				});
+			});
+		};
+
+		return {
+		
+			confirmed: function() {
+				return _confirmed();
+			},
+
+			//main function to initiate the module
+			init: function () {
+				_initInstances();
+			}
+
+		};
+	}();
+	// END : COOKIES NOTIFICATION BAR
+
+</script>
+
+
+    
+    <script src="//cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script type="module" src="https://metroui.org.ua/korzh/index.1fc92b19.js"></script>
+    <script>
+        window.selectedMenuItems = ["c-menu-item-metroui"];
+    </script>
+
+</body>
+</html>
